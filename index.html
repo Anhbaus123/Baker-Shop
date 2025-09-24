@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa Hàng Bánh Ngọt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+  <div id="main-logo">
+    <img src="/images/cake-logo.png" alt="Logo Bánh Ngọt">
+    <h1>Sweet Bakery</h1>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="#intro">Trang chủ</a></li>
+      <li><a href="#products">Sản phẩm</a></li>
+      <li><a href="#about-us">Về chúng tôi</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+      <li><a href="#" id="cart-btn">🛒 Giỏ hàng (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
+
+ <!-- Khung giỏ hàng (mặc định ẩn bên phải, sẽ trượt vào khi có class active) -->
+  <div id="cart">
+    <h2>🛒 Giỏ hàng</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Tổng tiền: </strong><span id="cart-total">0</span> VNĐ</p>
+      <!-- Form thông tin người đặt -->
+  <div class="checkout-form">
+    <h3>Thông tin đặt hàng</h3>
+    <input type="text" id="customer-name" placeholder="Họ và tên" required>
+    <input type="tel" id="customer-phone" placeholder="Số điện thoại" required>
+    <input type="text" id="customer-address" placeholder="Địa chỉ giao hàng" required>
+  </div>
+    <button id="checkout-btn">Thanh toán</button>
+    <button id="close-cart">Đóng</button>
+  </div>
+
+  <!-- Giới thiệu -->
+  <main>
+<section class="banner">
+  <div class="slides">
+    <img src="images/banner1.jpg" alt="Banner 1" class="active">
+    <img src="images/banner2.jpg" alt="Banner 2">
+    <img src="images/banner3.jpg" alt="Banner 3">
+  </div>
+
+</section>
+    <section id="intro">
+      <h2>Giới thiệu về Sweet Bakery</h2>
+      <p>Sweet Bakery là cửa hàng bánh ngọt trực tuyến, chuyên cung cấp các loại bánh tươi ngon, 
+         được làm từ nguyên liệu tự nhiên và công thức truyền thống.</p>
+    </section>
+
+    <!-- Sản phẩm -->
+    <section id="products">
+      <h2>Sản phẩm nổi bật</h2>
+      <ul class="product-list">
+        <li  data-price="50000">
+          <img src="images/cake1.jpg" alt="Bánh Kem">
+          <h3>Bánh Kem Socola</h3>
+          <p>Ngọt ngào, mềm mịn, cho bữa tiệc thêm trọn vẹn.</p>
+          <button class="buy-button">Mua ngay</button>
+        </li>
+        <li data-price="60000">
+          <img src="images/cake2.jpg" alt="Cupcake">
+          <h3>Cupcake Dâu Tây</h3>
+          <p>Nhỏ xinh, thơm ngon, phù hợp cho buổi trà chiều.</p>
+          <button class="buy-button">Mua ngay</button>
+        </li>
+        <li data-price="70000">
+          <img src="images/cake3.jpg" alt="Bánh Mousse">
+          <h3>Bánh Mousse Matcha</h3>
+          <p>Thanh mát, béo ngậy, dành cho tín đồ trà xanh.</p>
+          <button class="buy-button">Mua ngay</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Về chúng tôi -->
+    <section id="about-us">
+      <h2>Về Sweet Bakery</h2>
+      <p>Chúng tôi mang đến cho bạn những chiếc bánh ngọt được làm thủ công, 
+         với nguyên liệu tự nhiên và tình yêu dành cho ẩm thực.</p>
+    </section>
+
+    <!-- Liên hệ -->
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <form class="contact-form">
+        <input type="text" class="text-input" placeholder="Tên của bạn">
+        <input type="email" class="text-input" placeholder="Email của bạn">
+        <textarea class="text-input" placeholder="Tin nhắn..."></textarea>
+        <button type="submit" class="btn">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section logo-text">
+        <h2>Sweet Bakery</h2>
+        <p>Bánh ngọt cho mọi khoảnh khắc</p>
+      </div>
+      <div class="footer-section links">
+        <h2>Liên kết</h2>
+        <ul>
+          <li><a href="#intro">Trang chủ</a></li>
+          <li><a href="#products">Sản phẩm</a></li>
+          <li><a href="#about-us">Về chúng tôi</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h2>Liên hệ</h2>
+        <span>📍 1 Võ Văn Ngân, Phường Thủ Đức, Thành phố Hồ Chí Minh</span>
+        <span>📞 0123 456 789</span>
+        <span>✉️ sweetbakery@gmail.com</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Sweet Bakery | Tất cả quyền được bảo lưu
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
